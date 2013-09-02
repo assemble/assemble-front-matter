@@ -23,25 +23,25 @@ describe('Reading From Files', function() {
 
 
   it("yaml file starts with --- no content", function(done) {
-    var data = frontMatter.extract('./test/fixtures/pages/simple1.yml');
+    var data = frontMatter.extract('./test/fixtures/yaml/one.yml');
     expect(data.context).to.deep.equal(simpleExpected.context);
     done();
   });
 
   it("yaml file starts and ends with --- no content", function(done) {
-    var data = frontMatter.extract('./test/fixtures/pages/simple2.yml');
+    var data = frontMatter.extract('./test/fixtures/yaml/two.yml');
     expect(data.context).to.deep.equal(simpleExpected.context);
     done();
   });
 
   it("yaml file starts and ends with --- has content", function(done) {
-    var data = frontMatter.extract('./test/fixtures/pages/simple3.hbs');
+    var data = frontMatter.extract('./test/fixtures/beta.hbs');
     expect(data.context).to.deep.equal(simpleExpected.context);
     done();
   });
 
   it("hbs file with complex yaml data and content", function(done) {
-    var data = frontMatter.extract("./test/fixtures/pages/complex.hbs");
+    var data = frontMatter.extract("./test/fixtures/alpha.hbs");
     expect(data).to.deep.equal(complexExpected);
     done();
   });

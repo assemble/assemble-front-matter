@@ -1,6 +1,9 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  // Report elapsed execution time of grunt tasks.
+  require('time-grunt')(grunt);
+
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
@@ -10,7 +13,7 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       },
       lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
+        src: ['lib/*.js', 'test/*.js']
       }
     },
 
