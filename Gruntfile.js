@@ -1,9 +1,6 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  // Report elapsed execution time of grunt tasks.
-  require('time-grunt')(grunt);
-
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
@@ -43,10 +40,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-sync-pkg');
+  grunt.loadNpmTasks('grunt-readme');
 
   grunt.registerTask('test', ['mochaTest']);
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'test']);
-
+  grunt.registerTask('default', ['jshint', 'test', 'readme', 'sync']);
 };
