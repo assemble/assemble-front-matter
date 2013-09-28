@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/assemble/assemble-front-matter/issues"
   },
-  "main": "./lib",
+  "main": "./index.js",
   "scripts": {
     "test": "grunt test"
   },
