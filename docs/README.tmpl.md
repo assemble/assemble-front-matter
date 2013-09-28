@@ -1,23 +1,17 @@
-# {%= name %} [![NPM version](https://badge.fury.io/js/{%= name %}.png)](http://badge.fury.io/js/{%= name %})  [![Build Status](http://github.com/assemble/{%= name %}.png?branch=master)](http://github.com/assemble/{%= name %})
+---
+username: doowb
+---
+# {%= name %} [![NPM version](https://badge.fury.io/js/{%= name %}.png)](http://badge.fury.io/js/{%= name %}) {% if (travis) { %} [![Build Status]({%= travis %}.png)]({%= travis %}){% } %}
 
 > {%= description %}
 
-
-## Getting Started
-
-```shell
-npm install {%= name %} --save
-```
-
-and use it as follows:
-
-```js
-var yfm = require('{%= name %}');
-var data = yfm.extract("./file.hbs");
-```
-
 Visit [Assemble's documentation](http://assemble.io) for many more examples and pointers on getting started.
 
+## Getting Started
+{%= _.doc('getting-started.md') %}
+
+## Methods
+{%= _.doc('methods.md') %}
 
 {% if (changelog) { %}
 ## Release History
@@ -25,13 +19,13 @@ Visit [Assemble's documentation](http://assemble.io) for many more examples and 
 
 ## Author
 
-+ [github/{%= _.username() %}]({%= _.username() %})
-+ [twitter/{%= _.username() %}](http://twitter.com/{%= _.username() %})
++ [github.com/{%= username %}](https://github.com/{%= username %})
++ [twitter.com/{%= username %}](http://twitter.com/{%= username %})
 
 ## License
-{%= _.include("docs-license.md") %}
+{%= copyright %}
+{%= license %}
 
 ***
 
-_This file was generated on {%= grunt.template.today() %}._
-
+_This file was generated on Mon Sep 02 2013 09:44:51._
