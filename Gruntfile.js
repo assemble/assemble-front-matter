@@ -1,3 +1,12 @@
+/*
+ * assemble-front-matter
+ * https://github.com/assemble/assemble-front-matter
+ *
+ * Copyright (c) 2013 Brian Woodward, contributors.
+ * Licensed under the MIT license.
+ */
+
+
 /*global module:false*/
 module.exports = function(grunt) {
 
