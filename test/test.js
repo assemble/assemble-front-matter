@@ -8,7 +8,7 @@
 
 
 /*global require:true */
-var yfm = require('../lib/index');
+var yfm = require('../');
 var expect = require('chai').expect;
 
 
